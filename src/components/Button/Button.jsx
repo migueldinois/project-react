@@ -1,11 +1,11 @@
 import styles from './button.module.css'
 
-function Button() {
+function Button({texto='Clique aqui'}) {
     return (
         <>
-            <h1>Deu bom!</h1>
+            <button className={styles.button}>{texto}</button>
         </>
     )
 }
 
-export default Button
+export default Button 

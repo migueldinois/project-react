@@ -1,0 +1,17 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 4px 4px 0px #5c1da3; 
+    border: 1px solid #8a2be2;
+    margin: 30px;
+    max-width: 400px;
+    
+}
+
+.img_aluno {
+    width: 150px;
+    border-radius: 100%;
+}

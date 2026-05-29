@@ -1,13 +1,16 @@
 // Importando CSS
 import styles from './alunos.module.css'
 
-function Aluno(){
+function Aluno({nome='Vazio', idade='0', ativo=false}){
     return(
 
         <>
-            <p>Nome: Teste</p>
-            <p>Idade: 9</p>
-            <p>Ativo: SIM</p>
+        
+            <div className={styles.lista}>
+                <p>Nome: {nome}</p>
+                <p>Idade: {idade}</p>
+                <p>Ativo: {ativo ? 'Sim' : 'Não'}</p>
+            </div>
         </>
     )
 }

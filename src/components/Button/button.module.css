@@ -1,0 +1,16 @@
+.button {
+    background-color: blue;
+    margin: 10px;
+    padding: 20px;
+    border: 0 ;
+    border-radius: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    transition: 0.3s ease-in-out;
+    display: block;
+}
+
+.button:hover{
+    background-color: darkblue;
+    transform: scale(1.1);
+}

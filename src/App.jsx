@@ -10,9 +10,11 @@ function App() {
 
   return (
     <>
-      <Aluno />
-      <Button />
-      <Card/>
+      {/* <Aluno nome={'Miguel'} idade={17} ativo={true} />
+      <Aluno nome={'Carlos'} idade={23} ativo={false}/> */}
+      <Button texto={'Cadastro'} />
+      <Button texto={'Relatorio'} />
+      <Card aluno={'Miguel'} curso={'CyberSecurity'} imagem={'https://placehold.co/400'}/>
       <Lista/>
     </>
   )
