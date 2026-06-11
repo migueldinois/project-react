@@ -1,5 +1,5 @@
 // Importando CSS
-import styles from './alunos.module.css'
+import styles from './Alunos.module.css'
 
 function Aluno({nome='Vazio', idade='0', ativo=false}){
     return(

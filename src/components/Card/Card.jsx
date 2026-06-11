@@ -1,4 +1,4 @@
-import styles from './card.module.css'
+import styles from './Card.module.css'
 
 function Card({aluno='Nenhum', curso='Nenhum', imagem='https://placehold.co/400'}) {
     return (

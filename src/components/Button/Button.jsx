@@ -1,4 +1,4 @@
-import styles from './button.module.css'
+import styles from './Button.module.css'
 
 function Button({texto='Clique aqui'}) {
     return (
