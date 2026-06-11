@@ -5,6 +5,7 @@ import Button from './components/Button/Button.jsx'
 import Card from './components/Card/Card.jsx'
 import Lista from './components/Lista/Lista.jsx'
 import MsgUsuario from './components/MensagemUsuario/MsgUsuario.jsx'
+import UseStateHook from './components/UseStateHook/UseStateHook.jsx'
 
 
 
@@ -21,7 +22,7 @@ function App() {
       <Card aluno={'Carlos'} curso={'Cozinheiro'} imagem={'https://placehold.co/400'}/>
       <MsgUsuario nomeUsuario={'Miguel'} autenticado={true} />
       <MsgUsuario nomeUsuario={'Miguel'} autenticado={false} />
-      <Lista/>
+      <UseStateHook/>
     </>
   )
 };
