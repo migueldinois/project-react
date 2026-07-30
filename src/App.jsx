@@ -7,6 +7,8 @@ import Lista from './components/Lista/Lista.jsx'
 import MsgUsuario from './components/MensagemUsuario/MsgUsuario.jsx'
 import UseStateHook from './components/UseStateHook/UseStateHook.jsx'
 import Contador from './components/Contador/Contador.jsx'
+import UseEffectHook from './UseEffectHook/UseEffectHook.jsx'
+import Tema from './components/Tema/Tema.jsx'
 
 
 
@@ -23,8 +25,8 @@ function App() {
       <Card aluno={'Carlos'} curso={'Cozinheiro'} imagem={'https://placehold.co/400'}/>
       <MsgUsuario nomeUsuario={'Miguel'} autenticado={true} />
       <MsgUsuario nomeUsuario={'Miguel'} autenticado={false} />
-      <UseStateHook/> */}
-      <Contador/>
+      // <UseStateHook/> */}
+      <Tema/>
     </>
   )
 };

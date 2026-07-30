@@ -3,7 +3,7 @@ import styles from "./Contador.module.css"
 
 function Contador() {
     const [num, setNum] = useState(0)
-
+    const [automatico, setAutomatico] = useState(false)
 
     const addNum = () => {
         setNum(num + 1)
@@ -21,6 +21,20 @@ function Contador() {
         setNum(Math.floor(Math.random() * 100) + 1)
     }
 
+    useEffect(() => {
+        let relogio
+        if (automatico) {
+            relogio = setInterval(() => {
+                setNum((num) => num + 1)
+            }, 1000);
+        }
+
+        return () => clearInterval(relogio)
+    }, [automatico])
+
+    const alternarAutomatico = () => {
+        setAutomatico(!automatico)
+    }
 
     const obterClasse = () => {
         if (num > 0) return styles.spanPositivo
@@ -47,7 +61,7 @@ function Contador() {
                     <button className={styles.button} onClick={subtrairNum}>Subtrair</button>
                     <button className={styles.button} onClick={resetNum}>Reiniciar</button>
                     <button className={styles.button} onClick={sortearNum}>Sortear</button>
-            
+                    <button className={automatico ? styles.buttonAtivo : styles.contadorButton} onClick={alternarAutomatico}>{automatico ? 'Parar' : 'Contador'}</button>
                 </div>
             </div>
 
