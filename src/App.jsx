@@ -7,7 +7,8 @@ import Lista from './components/Lista/Lista.jsx'
 import MsgUsuario from './components/MensagemUsuario/MsgUsuario.jsx'
 import UseStateHook from './components/UseStateHook/UseStateHook.jsx'
 import Contador from './components/Contador/Contador.jsx'
-import UseEffectHook from './UseEffectHook/UseEffectHook.jsx'
+import ContadorAuto from './components/ContadorAuto/ContadorAuto.jsx'
+import UseEffectHook from './components/UseEffectHook/UseEffectHook.jsx'
 import Tema from './components/Tema/Tema.jsx'
 
 

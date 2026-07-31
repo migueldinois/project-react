@@ -1,5 +1,5 @@
 import { use, useEffect, useState } from "react"
-import styles from "./Contador.module.css"
+import styles from "./ContadorAuto.module.css"
 
 function Contador() {
     const [num, setNum] = useState(0)
