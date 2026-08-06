@@ -1,5 +1,9 @@
 import { use, useEffect, useState } from "react"
 import styles from "./ConsultaApiBtn.module.css"
+import Swal from "sweetalert2"
+
+
+
 
 function ConsultaApiBtn() {
 
@@ -7,24 +11,25 @@ function ConsultaApiBtn() {
     const [carregando, setCarregando] = useState(false)
     const [erros, setErros] = useState("")
 
+
     // Criando uma funcao async
     async function chamadaApi() {
         setCarregando(true)
         setErros("")
         try {
 
-            // const resposta = await fetch('https://jsonplaceholder.typicode.com/users');
-            const resposta = await fetch('https://httpbin.org/status/401')
+            const resposta = await fetch('https://jsonplaceholder.typicode.com/users');
+            // const resposta = await fetch('https://httpbin.org/status/401')
 
             if (!resposta.ok) {
 
                 if (resposta.status === 500) {
                     throw new Error("Erro 500: O banco de dados o servidor falhou")
-                    
+
                 }
                 if (resposta.status === 401) {
                     throw new Error("Erro 401: Usuário não autorizado.")
-                    
+
                 }
                 throw new Error(`Erro ${resposta.status}: URL não encontrada o inválida`)
             }
@@ -33,13 +38,33 @@ function ConsultaApiBtn() {
             setCarregando(false)
         } catch (error) {
             if (error.message === "Failed to fetch" || !navigator.onLine) {
+                Swal.fire({
+                    icon: "error",
+                    title: "Algo deu errado!",
+                    description: "Não foi possível conectar ao servidor. Verifique sua conexão de internet.",
+                    showConfirmButton: false,
+                    timer: 1500
+                })
                 setErros("Não foi possível conectar ao servidor. Verifique sua conexão de internet.");
             } else {
+                Swal.fire({
+                    icon: "error",
+                    title: "Algo deu errado!",
+                    description: error.message,
+                    showConfirmButton: false,
+                    timer: 1500
+                })
                 setErros(error.message)
             }
 
         }
         finally {
+            Swal.fire({
+                icon: "success",
+                title: "Dados carregados com sucesso",
+                showConfirmButton: false,
+                timer: 1500
+            });
             setCarregando(false)
         }
     }

@@ -10,7 +10,7 @@ import './App.css'
 // import ContadorAuto from './components/ContadorAuto/ContadorAuto.jsx'
 // import UseEffectHook from './components/UseEffectHook/UseEffectHook.jsx'
 // import Tema from './components/Tema/Tema.jsx'
-import ConsultaApiBtn from './components/ConsultaApiBtn/ConsultaApiBtn.jsx'
+import ConsultaApiBtnSa from './components/ConsultaApiBtn/ConsultaApiBtnSa.jsx'
 
 
 
@@ -28,7 +28,7 @@ function App() {
       <MsgUsuario nomeUsuario={'Miguel'} autenticado={true} />
       <MsgUsuario nomeUsuario={'Miguel'} autenticado={false} />
       // <UseStateHook/> */}
-      <ConsultaApiBtn/>
+      <ConsultaApiBtnSa/>
     </>
   )
 };
