@@ -1,15 +1,16 @@
 import { useState } from 'react'
 import './App.css'
-import Aluno from './components/Alunos/Alunos.jsx'
-import Button from './components/Button/Button.jsx'
-import Card from './components/Card/Card.jsx'
-import Lista from './components/Lista/Lista.jsx'
-import MsgUsuario from './components/MensagemUsuario/MsgUsuario.jsx'
-import UseStateHook from './components/UseStateHook/UseStateHook.jsx'
-import Contador from './components/Contador/Contador.jsx'
-import ContadorAuto from './components/ContadorAuto/ContadorAuto.jsx'
-import UseEffectHook from './components/UseEffectHook/UseEffectHook.jsx'
-import Tema from './components/Tema/Tema.jsx'
+// import Aluno from './components/Alunos/Alunos.jsx'
+// import Button from './components/Button/Button.jsx'
+// import Card from './components/Card/Card.jsx'
+// import Lista from './components/Lista/Lista.jsx'
+// import MsgUsuario from './components/MensagemUsuario/MsgUsuario.jsx'
+// import UseStateHook from './components/UseStateHook/UseStateHook.jsx'
+// import Contador from './components/Contador/Contador.jsx'
+// import ContadorAuto from './components/ContadorAuto/ContadorAuto.jsx'
+// import UseEffectHook from './components/UseEffectHook/UseEffectHook.jsx'
+// import Tema from './components/Tema/Tema.jsx'
+import ConsultaApiBtn from './components/ConsultaApiBtn/ConsultaApiBtn.jsx'
 
 
 
@@ -27,7 +28,7 @@ function App() {
       <MsgUsuario nomeUsuario={'Miguel'} autenticado={true} />
       <MsgUsuario nomeUsuario={'Miguel'} autenticado={false} />
       // <UseStateHook/> */}
-      <Tema/>
+      <ConsultaApiBtn/>
     </>
   )
 };

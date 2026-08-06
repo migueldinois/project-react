@@ -1,0 +1,74 @@
+.divPessoa {
+    border: '1px solid #ccc';
+    margin: '10px 0';
+    padding: '10px'
+}
+
+.container {
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #e8f5e9; /* Verde bem claro */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.buscarButton{
+    width: 125px;
+    height: 40px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin: 4px;
+    background-color: rgb(41, 126, 2);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+
+.buscarButton:hover{
+  background-color: rgb(56, 172, 2);
+}
+
+.titulo {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #1b5e20; /* Verde escuro */
+}
+
+.card {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(46, 125, 50, 0.15);
+  border: 1px solid #c8e6c9;
+}
+
+.lista {
+  list-style: none;
+  padding: 0;
+}
+
+.item {
+  padding: 1rem;
+  border-bottom: 1px solid #c8e6c9;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.item h3 {
+  margin: 0 0 0.5rem 0;
+  color: #2e7d32; /* Verde principal */
+}
+
+.item p {
+  color: #2f4f2f; /* Verde acinzentado */
+}
+
+.erro {
+  color: #c62828; /* Vermelho para destaque de erro */
+  font-weight: bold;
+}
