@@ -16,18 +16,44 @@ function ConsultaApiBtn() {
     async function chamadaApi() {
         setCarregando(true)
         setErros("")
+
+        Swal.fire({
+            title: "Carregando...",
+            text: "Seus dados estão sendo carregados",
+            allowOutsideClick: false,
+            didOpen: () => {
+                Swal.showLoading() 
+            }
+        })
         try {
 
             const resposta = await fetch('https://jsonplaceholder.typicode.com/users');
-            // const resposta = await fetch('https://httpbin.org/status/401')
+            // const resposta = await fetch('https://httpbin.org/status/500')
 
             if (!resposta.ok) {
 
                 if (resposta.status === 500) {
+                    Swal.fire({
+                        title: "Algo deu errado!",
+                        text: "Erro 500: O banco de dados o servidor falhou",
+                        icon: "error",
+                        showCancelButton: true,
+                        confirmButtonColor: "#3085d6",
+                        cancelButtonColor: "#d33",
+                        confirmButtonText: "Tentar Novamente"
+                    })
                     throw new Error("Erro 500: O banco de dados o servidor falhou")
-
                 }
                 if (resposta.status === 401) {
+                    Swal.fire({
+                        title: "Algo deu errado!",
+                        text: "Erro 401: Usuário não autorizado.",
+                        icon: "error",
+                        showCancelButton: true,
+                        confirmButtonColor: "#3085d6",
+                        cancelButtonColor: "#d33",
+                        confirmButtonText: "Tentar Novamente"
+                    })
                     throw new Error("Erro 401: Usuário não autorizado.")
 
                 }
@@ -41,7 +67,7 @@ function ConsultaApiBtn() {
                 Swal.fire({
                     icon: "error",
                     title: "Algo deu errado!",
-                    description: "Não foi possível conectar ao servidor. Verifique sua conexão de internet.",
+                    text: "Não foi possível conectar ao servidor. Verifique sua conexão de internet.",
                     showConfirmButton: false,
                     timer: 1500
                 })
@@ -50,7 +76,7 @@ function ConsultaApiBtn() {
                 Swal.fire({
                     icon: "error",
                     title: "Algo deu errado!",
-                    description: error.message,
+                    text: error.message,
                     showConfirmButton: false,
                     timer: 1500
                 })
@@ -59,17 +85,16 @@ function ConsultaApiBtn() {
 
         }
         finally {
-            Swal.fire({
-                icon: "success",
-                title: "Dados carregados com sucesso",
-                showConfirmButton: false,
-                timer: 1500
-            });
             setCarregando(false)
         }
     }
 
     function ContainerPessoa({ pessoa }) {
+        Swal.fire({
+            title: "Sucesso",
+            text: "Seus dados foram carregados com sucesso",
+            icon: "success"
+        });
         return (
             <li className={styles.item}>
                 <h3>{pessoa.name}</h3>
